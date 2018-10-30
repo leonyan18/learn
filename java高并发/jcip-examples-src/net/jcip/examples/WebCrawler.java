@@ -29,15 +29,18 @@ public abstract class WebCrawler {
 
     public synchronized void start() {
         exec = new TrackingExecutor(Executors.newCachedThreadPool());
-        for (URL url : urlsToCrawl) submitCrawlTask(url);
+        for (URL url : urlsToCrawl) {
+            submitCrawlTask(url);
+        }
         urlsToCrawl.clear();
     }
 
     public synchronized void stop() throws InterruptedException {
         try {
             saveUncrawled(exec.shutdownNow());
-            if (exec.awaitTermination(TIMEOUT, UNIT))
+            if (exec.awaitTermination(TIMEOUT, UNIT)) {
                 saveUncrawled(exec.getCancelledTasks());
+            }
         } finally {
             exec = null;
         }
@@ -46,8 +49,9 @@ public abstract class WebCrawler {
     protected abstract List<URL> processPage(URL url);
 
     private void saveUncrawled(List<Runnable> uncrawled) {
-        for (Runnable task : uncrawled)
+        for (Runnable task : uncrawled) {
             urlsToCrawl.add(((CrawlTask) task).getPage());
+        }
     }
 
     private void submitCrawlTask(URL u) {
@@ -72,10 +76,12 @@ public abstract class WebCrawler {
             System.out.printf("marking %s uncrawled%n", url);
         }
 
+        @Override
         public void run() {
             for (URL link : processPage(url)) {
-                if (Thread.currentThread().isInterrupted())
+                if (Thread.currentThread().isInterrupted()) {
                     return;
+                }
                 submitCrawlTask(link);
             }
         }

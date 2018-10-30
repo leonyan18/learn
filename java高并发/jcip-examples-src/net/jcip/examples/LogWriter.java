@@ -36,10 +36,12 @@ public class LogWriter {
             this.writer = new PrintWriter(writer, true); // autoflush
         }
 
+        @Override
         public void run() {
             try {
-                while (true)
+                while (true) {
                     writer.println(queue.take());
+                }
             } catch (InterruptedException ignored) {
             } finally {
                 writer.close();

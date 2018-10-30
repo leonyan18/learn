@@ -36,8 +36,9 @@ import net.jcip.annotations.*;
     public V take() throws InterruptedException {
         while (true) {
             synchronized (this) {
-                if (!isEmpty())
+                if (!isEmpty()) {
                     return doTake();
+                }
             }
             Thread.sleep(SLEEP_GRANULARITY);
         }

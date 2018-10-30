@@ -13,9 +13,11 @@ public class NoVisibility {
     private static int number;
 
     private static class ReaderThread extends Thread {
+        @Override
         public void run() {
-            while (!ready)
+            while (!ready) {
                 Thread.yield();
+            }
             System.out.println(number);
         }
     }

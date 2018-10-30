@@ -17,6 +17,7 @@ public class ThreadPerTaskWebServer {
         while (true) {
             final Socket connection = socket.accept();
             Runnable task = new Runnable() {
+                @Override
                 public void run() {
                     handleRequest(connection);
                 }

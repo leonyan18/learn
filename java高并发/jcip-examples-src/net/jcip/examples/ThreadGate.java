@@ -28,7 +28,8 @@ public class ThreadGate {
     // BLOCKS-UNTIL: opened-since(generation on entry)
     public synchronized void await() throws InterruptedException {
         int arrivalGeneration = generation;
-        while (!isOpen && arrivalGeneration == generation)
+        while (!isOpen && arrivalGeneration == generation) {
             wait();
+        }
     }
 }

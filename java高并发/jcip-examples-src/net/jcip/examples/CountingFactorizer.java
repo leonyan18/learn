@@ -19,6 +19,7 @@ public class CountingFactorizer extends GenericServlet implements Servlet {
 
     public long getCount() { return count.get(); }
 
+    @Override
     public void service(ServletRequest req, ServletResponse resp) {
         BigInteger i = extractFromRequest(req);
         BigInteger[] factors = factor(i);

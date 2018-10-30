@@ -39,21 +39,24 @@ public class LogService {
 
     public void log(String msg) throws InterruptedException {
         synchronized (this) {
-            if (isShutdown)
+            if (isShutdown) {
                 throw new IllegalStateException(/*...*/);
+            }
             ++reservations;
         }
         queue.put(msg);
     }
 
     private class LoggerThread extends Thread {
+        @Override
         public void run() {
             try {
                 while (true) {
                     try {
                         synchronized (LogService.this) {
-                            if (isShutdown && reservations == 0)
+                            if (isShutdown && reservations == 0) {
                                 break;
+                            }
                         }
                         String msg = queue.take();
                         synchronized (LogService.this) {

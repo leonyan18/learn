@@ -22,13 +22,15 @@ public class LifecycleWebServer {
             try {
                 final Socket conn = socket.accept();
                 exec.execute(new Runnable() {
+                    @Override
                     public void run() {
                         handleRequest(conn);
                     }
                 });
             } catch (RejectedExecutionException e) {
-                if (!exec.isShutdown())
+                if (!exec.isShutdown()) {
                     log("task submission rejected", e);
+                }
             }
         }
     }
@@ -43,10 +45,11 @@ public class LifecycleWebServer {
 
     void handleRequest(Socket connection) {
         Request req = readRequest(connection);
-        if (isShutdownRequest(req))
+        if (isShutdownRequest(req)) {
             stop();
-        else
+        } else {
             dispatchRequest(req);
+        }
     }
 
     interface Request {

@@ -16,8 +16,9 @@ public class DoubleCheckedLocking {
     public static Resource getInstance() {
         if (resource == null) {
             synchronized (DoubleCheckedLocking.class) {
-                if (resource == null)
+                if (resource == null) {
                     resource = new Resource();
+                }
             }
         }
         return resource;

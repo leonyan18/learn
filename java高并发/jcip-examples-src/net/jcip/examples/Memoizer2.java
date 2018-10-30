@@ -18,6 +18,7 @@ public class Memoizer2 <A, V> implements Computable<A, V> {
         this.c = c;
     }
 
+    @Override
     public V compute(A arg) throws InterruptedException {
         V result = cache.get(arg);
         if (result == null) {

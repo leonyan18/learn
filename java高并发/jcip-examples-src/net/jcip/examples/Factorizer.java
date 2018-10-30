@@ -16,6 +16,7 @@ import net.jcip.annotations.*;
 public class Factorizer extends GenericServlet implements Servlet {
     private final Computable<BigInteger, BigInteger[]> c =
             new Computable<BigInteger, BigInteger[]>() {
+                @Override
                 public BigInteger[] compute(BigInteger arg) {
                     return factor(arg);
                 }
@@ -23,6 +24,7 @@ public class Factorizer extends GenericServlet implements Servlet {
     private final Computable<BigInteger, BigInteger[]> cache
             = new Memoizer<BigInteger, BigInteger[]>(c);
 
+    @Override
     public void service(ServletRequest req,
                         ServletResponse resp) {
         try {

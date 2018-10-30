@@ -23,16 +23,18 @@ import net.jcip.annotations.*;
 
     // BLOCKS-UNTIL: not-full
     public synchronized void put(V v) throws InterruptedException {
-        while (isFull())
+        while (isFull()) {
             wait();
+        }
         doPut(v);
         notifyAll();
     }
 
     // BLOCKS-UNTIL: not-empty
     public synchronized V take() throws InterruptedException {
-        while (isEmpty())
+        while (isEmpty()) {
             wait();
+        }
         V v = doTake();
         notifyAll();
         return v;
@@ -41,11 +43,13 @@ import net.jcip.annotations.*;
     // BLOCKS-UNTIL: not-full
     // Alternate form of put() using conditional notification
     public synchronized void alternatePut(V v) throws InterruptedException {
-        while (isFull())
+        while (isFull()) {
             wait();
+        }
         boolean wasEmpty = isEmpty();
         doPut(v);
-        if (wasEmpty)
+        if (wasEmpty) {
             notifyAll();
+        }
     }
 }

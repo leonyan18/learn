@@ -23,6 +23,7 @@ public class ProducerConsumer {
             this.fileQueue = fileQueue;
             this.root = root;
             this.fileFilter = new FileFilter() {
+                @Override
                 public boolean accept(File f) {
                     return f.isDirectory() || fileFilter.accept(f);
                 }
@@ -33,6 +34,7 @@ public class ProducerConsumer {
             return false;
         }
 
+        @Override
         public void run() {
             try {
                 crawl(root);
@@ -44,11 +46,13 @@ public class ProducerConsumer {
         private void crawl(File root) throws InterruptedException {
             File[] entries = root.listFiles(fileFilter);
             if (entries != null) {
-                for (File entry : entries)
-                    if (entry.isDirectory())
+                for (File entry : entries) {
+                    if (entry.isDirectory()) {
                         crawl(entry);
-                    else if (!alreadyIndexed(entry))
+                    } else if (!alreadyIndexed(entry)) {
                         fileQueue.put(entry);
+                    }
+                }
             }
         }
     }
@@ -60,10 +64,12 @@ public class ProducerConsumer {
             this.queue = queue;
         }
 
+        @Override
         public void run() {
             try {
-                while (true)
+                while (true) {
                     indexFile(queue.take());
+                }
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
@@ -80,15 +86,18 @@ public class ProducerConsumer {
     public static void startIndexing(File[] roots) {
         BlockingQueue<File> queue = new LinkedBlockingQueue<File>(BOUND);
         FileFilter filter = new FileFilter() {
+            @Override
             public boolean accept(File file) {
                 return true;
             }
         };
 
-        for (File root : roots)
+        for (File root : roots) {
             new Thread(new FileCrawler(queue, filter, root)).start();
+        }
 
-        for (int i = 0; i < N_CONSUMERS; i++)
+        for (int i = 0; i < N_CONSUMERS; i++) {
             new Thread(new Indexer(queue)).start();
+        }
     }
 }

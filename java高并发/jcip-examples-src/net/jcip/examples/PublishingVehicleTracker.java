@@ -31,8 +31,9 @@ public class PublishingVehicleTracker {
     }
 
     public void setLocation(String id, int x, int y) {
-        if (!locations.containsKey(id))
+        if (!locations.containsKey(id)) {
             throw new IllegalArgumentException("invalid vehicle name: " + id);
+        }
         locations.get(id).set(x, y);
     }
 }

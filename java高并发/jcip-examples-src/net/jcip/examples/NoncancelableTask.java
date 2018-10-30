@@ -22,8 +22,9 @@ public class NoncancelableTask {
                 }
             }
         } finally {
-            if (interrupted)
+            if (interrupted) {
                 Thread.currentThread().interrupt();
+            }
         }
     }
 

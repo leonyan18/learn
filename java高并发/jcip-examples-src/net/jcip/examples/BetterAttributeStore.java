@@ -23,9 +23,10 @@ public class BetterAttributeStore {
         synchronized (this) {
             location = attributes.get(key);
         }
-        if (location == null)
+        if (location == null) {
             return false;
-        else
+        } else {
             return Pattern.matches(regexp, location);
+        }
     }
 }

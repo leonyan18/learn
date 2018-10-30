@@ -33,8 +33,9 @@ public class DelegatingVehicleTracker {
     }
 
     public void setLocation(String id, int x, int y) {
-        if (locations.replace(id, new Point(x, y)) == null)
+        if (locations.replace(id, new Point(x, y)) == null) {
             throw new IllegalArgumentException("invalid vehicle name: " + id);
+        }
     }
 
     // Alternate version of getLocations (Listing 4.8)

@@ -19,6 +19,7 @@ public class ThreadDeadlock {
             this.fileName = fileName;
         }
 
+        @Override
         public String call() throws Exception {
             // Here's where we would actually read the file
             return "";
@@ -26,6 +27,7 @@ public class ThreadDeadlock {
     }
 
     public class RenderPageTask implements Callable<String> {
+        @Override
         public String call() throws Exception {
             Future<String> header, footer;
             header = exec.submit(new LoadFileTask("header.html"));

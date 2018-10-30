@@ -21,11 +21,12 @@ public class UnsafeCachingFactorizer extends GenericServlet implements Servlet {
     private final AtomicReference<BigInteger[]> lastFactors
             = new AtomicReference<BigInteger[]>();
 
+    @Override
     public void service(ServletRequest req, ServletResponse resp) {
         BigInteger i = extractFromRequest(req);
-        if (i.equals(lastNumber.get()))
+        if (i.equals(lastNumber.get())) {
             encodeIntoResponse(resp, lastFactors.get());
-        else {
+        } else {
             BigInteger[] factors = factor(i);
             lastNumber.set(i);
             lastFactors.set(factors);

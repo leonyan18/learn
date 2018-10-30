@@ -22,12 +22,14 @@ public abstract class Renderer {
         final List<ImageInfo> info = scanForImageInfo(source);
         CompletionService<ImageData> completionService =
                 new ExecutorCompletionService<ImageData>(executor);
-        for (final ImageInfo imageInfo : info)
+        for (final ImageInfo imageInfo : info) {
             completionService.submit(new Callable<ImageData>() {
+                @Override
                 public ImageData call() {
                     return imageInfo.downloadImage();
                 }
             });
+        }
 
         renderText(source);
 

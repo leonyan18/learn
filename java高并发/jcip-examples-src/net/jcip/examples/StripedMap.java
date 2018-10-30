@@ -25,8 +25,9 @@ public class StripedMap {
     public StripedMap(int numBuckets) {
         buckets = new Node[numBuckets];
         locks = new Object[N_LOCKS];
-        for (int i = 0; i < N_LOCKS; i++)
+        for (int i = 0; i < N_LOCKS; i++) {
             locks[i] = new Object();
+        }
     }
 
     private final int hash(Object key) {
@@ -36,9 +37,11 @@ public class StripedMap {
     public Object get(Object key) {
         int hash = hash(key);
         synchronized (locks[hash % N_LOCKS]) {
-            for (Node m = buckets[hash]; m != null; m = m.next)
-                if (m.key.equals(key))
+            for (Node m = buckets[hash]; m != null; m = m.next) {
+                if (m.key.equals(key)) {
                     return m.value;
+                }
+            }
         }
         return null;
     }

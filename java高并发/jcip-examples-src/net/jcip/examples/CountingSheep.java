@@ -11,8 +11,9 @@ public class CountingSheep {
     volatile boolean asleep;
 
     void tryToSleep() {
-        while (!asleep)
+        while (!asleep) {
             countSomeSheep();
+        }
     }
 
     void countSomeSheep() {

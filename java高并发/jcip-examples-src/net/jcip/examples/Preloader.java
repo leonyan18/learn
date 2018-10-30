@@ -17,6 +17,7 @@ public class Preloader {
 
     private final FutureTask<ProductInfo> future =
         new FutureTask<ProductInfo>(new Callable<ProductInfo>() {
+            @Override
             public ProductInfo call() throws DataLoadException {
                 return loadProductInfo();
             }
@@ -31,10 +32,11 @@ public class Preloader {
             return future.get();
         } catch (ExecutionException e) {
             Throwable cause = e.getCause();
-            if (cause instanceof DataLoadException)
+            if (cause instanceof DataLoadException) {
                 throw (DataLoadException) cause;
-            else
+            } else {
                 throw LaunderThrowable.launderThrowable(cause);
+            }
         }
     }
 

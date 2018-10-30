@@ -17,15 +17,17 @@ public class NumberRange {
 
     public void setLower(int i) {
         // Warning -- unsafe check-then-act
-        if (i > upper.get())
+        if (i > upper.get()) {
             throw new IllegalArgumentException("can't set lower to " + i + " > upper");
+        }
         lower.set(i);
     }
 
     public void setUpper(int i) {
         // Warning -- unsafe check-then-act
-        if (i < lower.get())
+        if (i < lower.get()) {
             throw new IllegalArgumentException("can't set upper to " + i + " < lower");
+        }
         upper.set(i);
     }
 

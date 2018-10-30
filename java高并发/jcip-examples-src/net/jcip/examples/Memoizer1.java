@@ -20,6 +20,7 @@ public class Memoizer1 <A, V> implements Computable<A, V> {
         this.c = c;
     }
 
+    @Override
     public synchronized V compute(A arg) throws InterruptedException {
         V result = cache.get(arg);
         if (result == null) {
@@ -37,6 +38,7 @@ interface Computable <A, V> {
 
 class ExpensiveFunction
         implements Computable<String, BigInteger> {
+    @Override
     public BigInteger compute(String arg) {
         // after deep thought...
         return new BigInteger(arg);

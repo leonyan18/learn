@@ -24,9 +24,10 @@ public class OneValueCache {
     }
 
     public BigInteger[] getFactors(BigInteger i) {
-        if (lastNumber == null || !lastNumber.equals(i))
+        if (lastNumber == null || !lastNumber.equals(i)) {
             return null;
-        else
+        } else {
             return Arrays.copyOf(lastFactors, lastFactors.length);
+        }
     }
 }

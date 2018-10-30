@@ -27,11 +27,13 @@ public class ConditionBoundedBuffer <T> {
     public void put(T x) throws InterruptedException {
         lock.lock();
         try {
-            while (count == items.length)
+            while (count == items.length) {
                 notFull.await();
+            }
             items[tail] = x;
-            if (++tail == items.length)
+            if (++tail == items.length) {
                 tail = 0;
+            }
             ++count;
             notEmpty.signal();
         } finally {
@@ -43,12 +45,14 @@ public class ConditionBoundedBuffer <T> {
     public T take() throws InterruptedException {
         lock.lock();
         try {
-            while (count == 0)
+            while (count == 0) {
                 notEmpty.await();
+            }
             T x = items[head];
             items[head] = null;
-            if (++head == items.length)
+            if (++head == items.length) {
                 head = 0;
+            }
             --count;
             notFull.signal();
             return x;

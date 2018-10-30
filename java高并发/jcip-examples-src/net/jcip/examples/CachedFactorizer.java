@@ -27,6 +27,7 @@ public class CachedFactorizer extends GenericServlet implements Servlet {
         return (double) cacheHits / (double) hits;
     }
 
+    @Override
     public void service(ServletRequest req, ServletResponse resp) {
         BigInteger i = extractFromRequest(req);
         BigInteger[] factors = null;

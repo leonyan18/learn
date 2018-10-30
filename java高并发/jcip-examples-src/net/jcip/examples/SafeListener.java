@@ -12,6 +12,7 @@ public class SafeListener {
 
     private SafeListener() {
         listener = new EventListener() {
+            @Override
             public void onEvent(Event e) {
                 doSomething(e);
             }

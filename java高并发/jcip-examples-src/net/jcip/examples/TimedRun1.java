@@ -16,6 +16,7 @@ public class TimedRun1 {
                                 long timeout, TimeUnit unit) {
         final Thread taskThread = Thread.currentThread();
         cancelExec.schedule(new Runnable() {
+            @Override
             public void run() {
                 taskThread.interrupt();
             }

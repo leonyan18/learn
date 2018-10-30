@@ -21,9 +21,10 @@ public class AttributeStore {
                                                     String regexp) {
         String key = "users." + name + ".location";
         String location = attributes.get(key);
-        if (location == null)
+        if (location == null) {
             return false;
-        else
+        } else {
             return Pattern.matches(regexp, location);
+        }
     }
 }

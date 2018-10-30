@@ -24,8 +24,9 @@ public class HiddenIterator {
 
     public void addTenThings() {
         Random r = new Random();
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++) {
             add(r.nextInt());
+        }
         System.out.println("DEBUG: added ten elements to " + set);
     }
 }

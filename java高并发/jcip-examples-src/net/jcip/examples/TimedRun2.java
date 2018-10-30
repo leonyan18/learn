@@ -20,6 +20,7 @@ public class TimedRun2 {
         class RethrowableTask implements Runnable {
             private volatile Throwable t;
 
+            @Override
             public void run() {
                 try {
                     r.run();
@@ -29,8 +30,9 @@ public class TimedRun2 {
             }
 
             void rethrow() {
-                if (t != null)
+                if (t != null) {
                     throw launderThrowable(t);
+                }
             }
         }
 
@@ -38,6 +40,7 @@ public class TimedRun2 {
         final Thread taskThread = new Thread(task);
         taskThread.start();
         cancelExec.schedule(new Runnable() {
+            @Override
             public void run() {
                 taskThread.interrupt();
             }

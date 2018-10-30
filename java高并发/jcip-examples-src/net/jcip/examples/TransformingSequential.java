@@ -13,17 +13,20 @@ import java.util.concurrent.*;
 public abstract class TransformingSequential {
 
     void processSequentially(List<Element> elements) {
-        for (Element e : elements)
+        for (Element e : elements) {
             process(e);
+        }
     }
 
     void processInParallel(Executor exec, List<Element> elements) {
-        for (final Element e : elements)
+        for (final Element e : elements) {
             exec.execute(new Runnable() {
+                @Override
                 public void run() {
                     process(e);
                 }
             });
+        }
     }
 
     public abstract void process(Element e);
@@ -42,6 +45,7 @@ public abstract class TransformingSequential {
                                       final Collection<T> results) {
         for (final Node<T> n : nodes) {
             exec.execute(new Runnable() {
+                @Override
                 public void run() {
                     results.add(n.compute());
                 }

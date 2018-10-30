@@ -46,6 +46,7 @@ public class RenderWithTimeBudget {
     }
 
     static class FetchAdTask implements Callable<Ad> {
+        @Override
         public Ad call() {
             return new Ad();
         }

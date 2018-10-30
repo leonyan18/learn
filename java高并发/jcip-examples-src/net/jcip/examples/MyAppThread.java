@@ -24,6 +24,7 @@ public class MyAppThread extends Thread {
     public MyAppThread(Runnable runnable, String name) {
         super(runnable, name + "-" + created.incrementAndGet());
         setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+            @Override
             public void uncaughtException(Thread t,
                                           Throwable e) {
                 log.log(Level.SEVERE,
@@ -32,16 +33,21 @@ public class MyAppThread extends Thread {
         });
     }
 
+    @Override
     public void run() {
         // Copy debug flag to ensure consistent value throughout.
         boolean debug = debugLifecycle;
-        if (debug) log.log(Level.FINE, "Created " + getName());
+        if (debug) {
+            log.log(Level.FINE, "Created " + getName());
+        }
         try {
             alive.incrementAndGet();
             super.run();
         } finally {
             alive.decrementAndGet();
-            if (debug) log.log(Level.FINE, "Exiting " + getName());
+            if (debug) {
+                log.log(Level.FINE, "Exiting " + getName());
+            }
         }
     }
 

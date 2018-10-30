@@ -16,6 +16,7 @@ public class ConnectionDispenser {
 
     private ThreadLocal<Connection> connectionHolder
             = new ThreadLocal<Connection>() {
+                @Override
                 public Connection initialValue() {
                     try {
                         return DriverManager.getConnection(DB_URL);

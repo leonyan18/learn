@@ -19,23 +19,28 @@ public class CellularAutomata {
         int count = Runtime.getRuntime().availableProcessors();
         this.barrier = new CyclicBarrier(count,
                 new Runnable() {
+                    @Override
                     public void run() {
                         mainBoard.commitNewValues();
                     }});
         this.workers = new Worker[count];
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < count; i++) {
             workers[i] = new Worker(mainBoard.getSubBoard(count, i));
+        }
     }
 
     private class Worker implements Runnable {
         private final Board board;
 
         public Worker(Board board) { this.board = board; }
+        @Override
         public void run() {
             while (!board.hasConverged()) {
-                for (int x = 0; x < board.getMaxX(); x++)
-                    for (int y = 0; y < board.getMaxY(); y++)
+                for (int x = 0; x < board.getMaxX(); x++) {
+                    for (int y = 0; y < board.getMaxY(); y++) {
                         board.setNewValue(x, y, computeValue(x, y));
+                    }
+                }
                 try {
                     barrier.await();
                 } catch (InterruptedException ex) {
@@ -53,8 +58,9 @@ public class CellularAutomata {
     }
 
     public void start() {
-        for (int i = 0; i < workers.length; i++)
+        for (int i = 0; i < workers.length; i++) {
             new Thread(workers[i]).start();
+        }
         mainBoard.waitForConvergence();
     }
 

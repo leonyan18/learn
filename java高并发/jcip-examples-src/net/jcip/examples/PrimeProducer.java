@@ -17,11 +17,13 @@ public class PrimeProducer extends Thread {
         this.queue = queue;
     }
 
+    @Override
     public void run() {
         try {
             BigInteger p = BigInteger.ONE;
-            while (!Thread.currentThread().isInterrupted())
+            while (!Thread.currentThread().isInterrupted()) {
                 queue.put(p = p.nextProbablePrime());
+            }
         } catch (InterruptedException consumed) {
             /* Allow thread to exit */
         }

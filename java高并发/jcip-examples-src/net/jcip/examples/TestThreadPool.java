@@ -20,8 +20,9 @@ public class TestThreadPool extends TestCase {
         int MAX_SIZE = 10;
         ExecutorService exec = Executors.newFixedThreadPool(MAX_SIZE);
 
-        for (int i = 0; i < 10 * MAX_SIZE; i++)
+        for (int i = 0; i < 10 * MAX_SIZE; i++) {
             exec.execute(new Runnable() {
+                @Override
                 public void run() {
                     try {
                         Thread.sleep(Long.MAX_VALUE);
@@ -30,10 +31,12 @@ public class TestThreadPool extends TestCase {
                     }
                 }
             });
+        }
         for (int i = 0;
              i < 20 && threadFactory.numCreated.get() < MAX_SIZE;
-             i++)
+             i++) {
             Thread.sleep(100);
+        }
         assertEquals(threadFactory.numCreated.get(), MAX_SIZE);
         exec.shutdownNow();
     }
@@ -43,6 +46,7 @@ class TestingThreadFactory implements ThreadFactory {
     public final AtomicInteger numCreated = new AtomicInteger();
     private final ThreadFactory factory = Executors.defaultThreadFactory();
 
+    @Override
     public Thread newThread(Runnable r) {
         numCreated.incrementAndGet();
         return factory.newThread(r);

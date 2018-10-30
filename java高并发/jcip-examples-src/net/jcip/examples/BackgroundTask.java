@@ -16,14 +16,17 @@ public abstract class BackgroundTask <V> implements Runnable, Future<V> {
     private class Computation extends FutureTask<V> {
         public Computation() {
             super(new Callable<V>() {
+                @Override
                 public V call() throws Exception {
                     return BackgroundTask.this.compute();
                 }
             });
         }
 
+        @Override
         protected final void done() {
             GuiExecutor.instance().execute(new Runnable() {
+                @Override
                 public void run() {
                     V value = null;
                     Throwable thrown = null;
@@ -45,6 +48,7 @@ public abstract class BackgroundTask <V> implements Runnable, Future<V> {
 
     protected void setProgress(final int current, final int max) {
         GuiExecutor.instance().execute(new Runnable() {
+            @Override
             public void run() {
                 onProgress(current, max);
             }
@@ -63,14 +67,17 @@ public abstract class BackgroundTask <V> implements Runnable, Future<V> {
     }
 
     // Other Future methods just forwarded to computation
+    @Override
     public boolean cancel(boolean mayInterruptIfRunning) {
         return computation.cancel(mayInterruptIfRunning);
     }
 
+    @Override
     public V get() throws InterruptedException, ExecutionException {
         return computation.get();
     }
 
+    @Override
     public V get(long timeout, TimeUnit unit)
             throws InterruptedException,
             ExecutionException,
@@ -78,14 +85,17 @@ public abstract class BackgroundTask <V> implements Runnable, Future<V> {
         return computation.get(timeout, unit);
     }
 
+    @Override
     public boolean isCancelled() {
         return computation.isCancelled();
     }
 
+    @Override
     public boolean isDone() {
         return computation.isDone();
     }
 
+    @Override
     public void run() {
         computation.run();
     }

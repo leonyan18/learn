@@ -18,12 +18,13 @@ public class SynchronizedFactorizer extends GenericServlet implements Servlet {
     @GuardedBy("this") private BigInteger lastNumber;
     @GuardedBy("this") private BigInteger[] lastFactors;
 
+    @Override
     public synchronized void service(ServletRequest req,
                                      ServletResponse resp) {
         BigInteger i = extractFromRequest(req);
-        if (i.equals(lastNumber))
+        if (i.equals(lastNumber)) {
             encodeIntoResponse(resp, lastFactors);
-        else {
+        } else {
             BigInteger[] factors = factor(i);
             lastNumber = i;
             lastFactors = factors;

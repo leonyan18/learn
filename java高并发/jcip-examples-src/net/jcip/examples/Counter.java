@@ -18,8 +18,9 @@ public final class Counter {
     }
 
     public synchronized long increment() {
-        if (value == Long.MAX_VALUE)
+        if (value == Long.MAX_VALUE) {
             throw new IllegalStateException("counter overflow");
+        }
         return ++value;
     }
 }

@@ -20,14 +20,16 @@ import net.jcip.annotations.*;
     }
 
     public synchronized void put(V v) throws BufferFullException {
-        if (isFull())
+        if (isFull()) {
             throw new BufferFullException();
+        }
         doPut(v);
     }
 
     public synchronized V take() throws BufferEmptyException {
-        if (isEmpty())
+        if (isEmpty()) {
             throw new BufferEmptyException();
+        }
         return doTake();
     }
 }

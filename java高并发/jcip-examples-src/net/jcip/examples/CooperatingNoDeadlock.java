@@ -31,8 +31,9 @@ class CooperatingNoDeadlock {
                 this.location = location;
                 reachedDestination = location.equals(destination);
             }
-            if (reachedDestination)
+            if (reachedDestination) {
                 dispatcher.notifyAvailable(this);
+            }
         }
 
         public synchronized Point getDestination() {
@@ -64,8 +65,9 @@ class CooperatingNoDeadlock {
                 copy = new HashSet<Taxi>(taxis);
             }
             Image image = new Image();
-            for (Taxi t : copy)
+            for (Taxi t : copy) {
                 image.drawMarker(t.getLocation());
+            }
             return image;
         }
     }

@@ -27,8 +27,9 @@ public class CooperatingDeadlock {
 
         public synchronized void setLocation(Point location) {
             this.location = location;
-            if (location.equals(destination))
+            if (location.equals(destination)) {
                 dispatcher.notifyAvailable(this);
+            }
         }
 
         public synchronized Point getDestination() {
@@ -55,8 +56,9 @@ public class CooperatingDeadlock {
 
         public synchronized Image getImage() {
             Image image = new Image();
-            for (Taxi t : taxis)
+            for (Taxi t : taxis) {
                 image.drawMarker(t.getLocation());
+            }
             return image;
         }
     }

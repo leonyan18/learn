@@ -30,9 +30,9 @@ public class DeadlockAvoidance {
                 try {
                     if (toAcct.lock.tryLock()) {
                         try {
-                            if (fromAcct.getBalance().compareTo(amount) < 0)
+                            if (fromAcct.getBalance().compareTo(amount) < 0) {
                                 throw new InsufficientFundsException();
-                            else {
+                            } else {
                                 fromAcct.debit(amount);
                                 toAcct.credit(amount);
                                 return true;
@@ -45,8 +45,9 @@ public class DeadlockAvoidance {
                     fromAcct.lock.unlock();
                 }
             }
-            if (System.nanoTime() < stopTime)
+            if (System.nanoTime() < stopTime) {
                 return false;
+            }
             NANOSECONDS.sleep(fixedDelay + rnd.nextLong() % randMod);
         }
     }
@@ -63,6 +64,7 @@ public class DeadlockAvoidance {
     }
 
     static class DollarAmount implements Comparable<DollarAmount> {
+        @Override
         public int compareTo(DollarAmount other) {
             return 0;
         }

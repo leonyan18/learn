@@ -5,11 +5,118 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01c72903-1d4e-4e1e-b581-c12b20bf975d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../java高并发/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../java高并发/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Animals.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Animals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/AttributeStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/AttributeStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BackgroundTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BackgroundTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BarrierTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BarrierTimer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BaseBoundedBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BaseBoundedBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BetterAttributeStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BetterAttributeStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BetterVector.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BetterVector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BoundedBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BoundedBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BoundedExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BoundedExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BoundedHashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BoundedHashSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BrokenPrimeProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/BrokenPrimeProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CachedFactorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CachedFactorizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CasNumberRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CasNumberRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CellularAutomata.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CellularAutomata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CheckForMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CheckForMail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ConcurrentPuzzleSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ConcurrentPuzzleSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ConcurrentStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ConcurrentStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ConditionBoundedBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ConditionBoundedBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ConnectionDispenser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ConnectionDispenser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CooperatingDeadlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CooperatingDeadlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CooperatingNoDeadlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CooperatingNoDeadlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Counter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CountingFactorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CountingFactorizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CountingSheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/CountingSheep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/DeadlockAvoidance.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/DeadlockAvoidance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/DelegatingVehicleTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/DelegatingVehicleTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/DemonstrateDeadlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/DemonstrateDeadlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/DoubleCheckedLocking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/DoubleCheckedLocking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/DynamicOrderDeadlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/DynamicOrderDeadlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Factorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Factorizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/FutureRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/FutureRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/GrumpyBoundedBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/GrumpyBoundedBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/GuiExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/GuiExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/HiddenIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/HiddenIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Holder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Holder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ImprovedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ImprovedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/IndexingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/IndexingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/InduceLockOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/InduceLockOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/LaunderThrowable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/LaunderThrowable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/LazyInitRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/LazyInitRace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/LifecycleWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/LifecycleWebServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ListHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ListHelpers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ListenerExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ListenerExamples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/LogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/LogWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/LogWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Memoizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Memoizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Memoizer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Memoizer1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Memoizer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Memoizer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Memoizer3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Memoizer3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/MonitorVehicleTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/MonitorVehicleTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/MyAppThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/MyAppThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/MyThreadFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/MyThreadFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/NoVisibility.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/NoVisibility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/NoncancelableTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/NoncancelableTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/NonreentrantDeadlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/NonreentrantDeadlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/NumberRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/NumberRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/OneShotLatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/OneShotLatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/OneValueCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/OneValueCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/OutOfTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/OutOfTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PossibleReordering.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PossibleReordering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Preloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Preloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PrimeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PrimeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PrimeProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PrimeProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ProducerConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ProducerConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PublishingVehicleTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PublishingVehicleTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PutTakeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PutTakeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PuzzleNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PuzzleNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PuzzleSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/PuzzleSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ReaderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ReaderThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/RenderWithTimeBudget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/RenderWithTimeBudget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SafeLazyInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SafeLazyInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SafeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SafeListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SemaphoreBoundedBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SemaphoreBoundedBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SemaphoreOnLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SemaphoreOnLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SequentialPuzzleSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SequentialPuzzleSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SimulatedCAS.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SimulatedCAS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SingleThreadRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SingleThreadRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SleepyBoundedBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SleepyBoundedBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SocketUsingTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SocketUsingTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/StatelessFactorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/StatelessFactorizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/StripedMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/StripedMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SwingUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SwingUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SynchronizedFactorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/SynchronizedFactorizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TaskExecutionWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TaskExecutionWebServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TaskRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TaskRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TestBoundedBuffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TestBoundedBuffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TestHarness.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TestHarness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TestThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TestThreadPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ThisEscape.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ThisEscape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ThreadDeadlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ThreadDeadlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ThreadGate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ThreadGate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ThreadPerTaskExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ThreadPerTaskExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ThreadPerTaskWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/ThreadPerTaskWebServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimeBudget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimeBudget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimedLocking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimedLocking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimedPutTakeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimedPutTakeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimedRun1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimedRun1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimedRun2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimedRun2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimingThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TimingThreadPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TrackingExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TrackingExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TransformingSequential.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/TransformingSequential.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/UEHLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/UEHLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/UnsafeCachingFactorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/UnsafeCachingFactorizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/UnsafeCountingFactorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/UnsafeCountingFactorizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/UnsafeLazyInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/UnsafeLazyInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/VolatileCachedFactorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/VolatileCachedFactorizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/WebCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/WebCrawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/WithinThreadExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/WithinThreadExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/WorkerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../java高并发/jcip-examples-src/net/jcip/examples/WorkerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../设计模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../设计模式.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,7 +233,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -259,7 +366,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540874897429" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540875167180" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -373,7 +480,7 @@
       <updated>1540726554617</updated>
       <workItem from="1540726557884" duration="2163000" />
       <workItem from="1540817247254" duration="6279000" />
-      <workItem from="1540874641105" duration="256000" />
+      <workItem from="1540874641105" duration="502000" />
     </task>
     <task id="LOCAL-00001" summary="设计模式更新">
       <created>1540868370109</created>
@@ -386,11 +493,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8698000" />
+    <option name="totallyTimeSpent" value="8944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -718,7 +824,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>

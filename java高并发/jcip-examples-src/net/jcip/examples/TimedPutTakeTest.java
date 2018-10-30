@@ -17,6 +17,7 @@ public class TimedPutTakeTest extends PutTakeTest {
         barrier = new CyclicBarrier(nPairs * 2 + 1, timer);
     }
 
+    @Override
     public void test() {
         try {
             timer.clear();

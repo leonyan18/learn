@@ -23,9 +23,9 @@ public class Animals {
         animals = new TreeSet<Animal>(new SpeciesGenderComparator());
         animals.addAll(candidates);
         for (Animal a : animals) {
-            if (candidate == null || !candidate.isPotentialMate(a))
+            if (candidate == null || !candidate.isPotentialMate(a)) {
                 candidate = a;
-            else {
+            } else {
                 ark.load(new AnimalPair(candidate, a));
                 ++numPairs;
                 candidate = null;
@@ -65,6 +65,7 @@ public class Animals {
     }
 
     class SpeciesGenderComparator implements Comparator<Animal> {
+        @Override
         public int compare(Animal one, Animal two) {
             int speciesCompare = one.species.compareTo(two.species);
             return (speciesCompare != 0)

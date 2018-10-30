@@ -21,6 +21,7 @@ public class OutOfTime {
     }
 
     static class ThrowTask extends TimerTask {
+        @Override
         public void run() {
             throw new RuntimeException();
         }

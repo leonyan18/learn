@@ -24,6 +24,7 @@ public class IndexingService {
         this.root = root;
         this.queue = new LinkedBlockingQueue<File>(CAPACITY);
         this.fileFilter = new FileFilter() {
+            @Override
             public boolean accept(File f) {
                 return f.isDirectory() || fileFilter.accept(f);
             }
@@ -35,6 +36,7 @@ public class IndexingService {
     }
 
     class CrawlerThread extends Thread {
+        @Override
         public void run() {
             try {
                 crawl(root);
@@ -54,24 +56,27 @@ public class IndexingService {
             File[] entries = root.listFiles(fileFilter);
             if (entries != null) {
                 for (File entry : entries) {
-                    if (entry.isDirectory())
+                    if (entry.isDirectory()) {
                         crawl(entry);
-                    else if (!alreadyIndexed(entry))
+                    } else if (!alreadyIndexed(entry)) {
                         queue.put(entry);
+                    }
                 }
             }
         }
     }
 
     class IndexerThread extends Thread {
+        @Override
         public void run() {
             try {
                 while (true) {
                     File file = queue.take();
-                    if (file == POISON)
+                    if (file == POISON) {
                         break;
-                    else
+                    } else {
                         indexFile(file);
+                    }
                 }
             } catch (InterruptedException consumed) {
             }

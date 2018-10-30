@@ -20,6 +20,7 @@ public class ListenerExamples {
 
     private void backgroundRandom() {
         colorButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 colorButton.setBackground(new Color(random.nextInt()));
             }
@@ -31,8 +32,10 @@ public class ListenerExamples {
 
     private void longRunningTask() {
         computeButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 exec.execute(new Runnable() {
+                    @Override
                     public void run() {
                         /* Do big computation */
                     }
@@ -47,15 +50,18 @@ public class ListenerExamples {
 
     private void longRunningTaskWithFeedback() {
         button.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 button.setEnabled(false);
                 label.setText("busy");
                 exec.execute(new Runnable() {
+                    @Override
                     public void run() {
                         try {
                             /* Do big computation */
                         } finally {
                             GuiExecutor.instance().execute(new Runnable() {
+                                @Override
                                 public void run() {
                                     button.setEnabled(true);
                                     label.setText("idle");
@@ -74,9 +80,11 @@ public class ListenerExamples {
 
     private void taskWithCancellation() {
         startButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (runningTask != null) {
                     runningTask = exec.submit(new Runnable() {
+                        @Override
                         public void run() {
                             while (moreWork()) {
                                 if (Thread.currentThread().isInterrupted()) {
@@ -104,9 +112,11 @@ public class ListenerExamples {
         });
 
         cancelButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent event) {
-                if (runningTask != null)
+                if (runningTask != null) {
                     runningTask.cancel(true);
+                }
             }
         });
     }
@@ -114,19 +124,24 @@ public class ListenerExamples {
 
     private void runInBackground(final Runnable task) {
         startButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 class CancelListener implements ActionListener {
                     BackgroundTask<?> task;
+                    @Override
                     public void actionPerformed(ActionEvent event) {
-                        if (task != null)
+                        if (task != null) {
                             task.cancel(true);
+                        }
                     }
                 }
                 final CancelListener listener = new CancelListener();
                 listener.task = new BackgroundTask<Void>() {
+                    @Override
                     public Void compute() {
-                        while (moreWork() && !isCancelled())
+                        while (moreWork() && !isCancelled()) {
                             doSomeWork();
+                        }
                         return null;
                     }
 

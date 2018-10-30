@@ -17,8 +17,9 @@ public class TimeBudget {
                                                    Comparator<TravelQuote> ranking, long time, TimeUnit unit)
             throws InterruptedException {
         List<QuoteTask> tasks = new ArrayList<QuoteTask>();
-        for (TravelCompany company : companies)
+        for (TravelCompany company : companies) {
             tasks.add(new QuoteTask(company, travelInfo));
+        }
 
         List<Future<TravelQuote>> futures = exec.invokeAll(tasks, time, unit);
 
@@ -59,6 +60,7 @@ class QuoteTask implements Callable<TravelQuote> {
         return null;
     }
 
+    @Override
     public TravelQuote call() throws Exception {
         return company.solicitQuote(travelInfo);
     }

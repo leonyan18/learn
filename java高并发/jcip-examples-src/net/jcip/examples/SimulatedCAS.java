@@ -21,8 +21,9 @@ public class SimulatedCAS {
     public synchronized int compareAndSwap(int expectedValue,
                                            int newValue) {
         int oldValue = value;
-        if (oldValue == expectedValue)
+        if (oldValue == expectedValue) {
             value = newValue;
+        }
         return oldValue;
     }
 

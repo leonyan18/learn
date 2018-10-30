@@ -22,6 +22,7 @@ public class PrimeGenerator implements Runnable {
             = new ArrayList<BigInteger>();
     private volatile boolean cancelled;
 
+    @Override
     public void run() {
         BigInteger p = BigInteger.ONE;
         while (!cancelled) {

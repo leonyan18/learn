@@ -14,8 +14,9 @@ public class SafeLazyInitialization {
     private static Resource resource;
 
     public synchronized static Resource getInstance() {
-        if (resource == null)
+        if (resource == null) {
             resource = new Resource();
+        }
         return resource;
     }
 

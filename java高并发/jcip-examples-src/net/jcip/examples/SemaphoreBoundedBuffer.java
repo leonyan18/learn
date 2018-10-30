@@ -18,8 +18,9 @@ public class SemaphoreBoundedBuffer <E> {
     @GuardedBy("this") private int putPosition = 0, takePosition = 0;
 
     public SemaphoreBoundedBuffer(int capacity) {
-        if (capacity <= 0)
+        if (capacity <= 0) {
             throw new IllegalArgumentException();
+        }
         availableItems = new Semaphore(0);
         availableSpaces = new Semaphore(capacity);
         items = (E[]) new Object[capacity];

@@ -17,9 +17,9 @@ public class DynamicOrderDeadlock {
             throws InsufficientFundsException {
         synchronized (fromAccount) {
             synchronized (toAccount) {
-                if (fromAccount.getBalance().compareTo(amount) < 0)
+                if (fromAccount.getBalance().compareTo(amount) < 0) {
                     throw new InsufficientFundsException();
-                else {
+                } else {
                     fromAccount.debit(amount);
                     toAccount.credit(amount);
                 }
@@ -41,6 +41,7 @@ public class DynamicOrderDeadlock {
             return null;
         }
 
+        @Override
         public int compareTo(DollarAmount dollarAmount) {
             return 0;
         }

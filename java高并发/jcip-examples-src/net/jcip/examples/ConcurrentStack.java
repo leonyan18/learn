@@ -29,8 +29,9 @@ import net.jcip.annotations.*;
         Node<E> newHead;
         do {
             oldHead = top.get();
-            if (oldHead == null)
+            if (oldHead == null) {
                 return null;
+            }
             newHead = oldHead.next;
         } while (!top.compareAndSet(oldHead, newHead));
         return oldHead.item;

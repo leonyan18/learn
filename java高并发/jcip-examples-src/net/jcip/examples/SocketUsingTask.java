@@ -21,16 +21,20 @@ public abstract class SocketUsingTask <T> implements CancellableTask<T> {
         socket = s;
     }
 
+    @Override
     public synchronized void cancel() {
         try {
-            if (socket != null)
+            if (socket != null) {
                 socket.close();
+            }
         } catch (IOException ignored) {
         }
     }
 
+    @Override
     public RunnableFuture<T> newTask() {
         return new FutureTask<T>(this) {
+            @Override
             public boolean cancel(boolean mayInterruptIfRunning) {
                 try {
                     SocketUsingTask.this.cancel();
@@ -68,10 +72,12 @@ class CancellingExecutor extends ThreadPoolExecutor {
         super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory, handler);
     }
 
+    @Override
     protected <T> RunnableFuture<T> newTaskFor(Callable<T> callable) {
-        if (callable instanceof CancellableTask)
+        if (callable instanceof CancellableTask) {
             return ((CancellableTask<T>) callable).newTask();
-        else
+        } else {
             return super.newTaskFor(callable);
+        }
     }
 }

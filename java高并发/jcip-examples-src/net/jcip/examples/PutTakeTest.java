@@ -54,6 +54,7 @@ public class PutTakeTest extends TestCase {
     }
 
     class Producer implements Runnable {
+        @Override
         public void run() {
             try {
                 int seed = (this.hashCode() ^ (int) System.nanoTime());
@@ -73,6 +74,7 @@ public class PutTakeTest extends TestCase {
     }
 
     class Consumer implements Runnable {
+        @Override
         public void run() {
             try {
                 barrier.await();

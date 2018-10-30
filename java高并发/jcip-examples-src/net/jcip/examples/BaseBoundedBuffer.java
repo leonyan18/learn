@@ -22,16 +22,18 @@ public abstract class BaseBoundedBuffer <V> {
 
     protected synchronized final void doPut(V v) {
         buf[tail] = v;
-        if (++tail == buf.length)
+        if (++tail == buf.length) {
             tail = 0;
+        }
         ++count;
     }
 
     protected synchronized final V doTake() {
         V v = buf[head];
         buf[head] = null;
-        if (++head == buf.length)
+        if (++head == buf.length) {
             head = 0;
+        }
         --count;
         return v;
     }

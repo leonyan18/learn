@@ -21,6 +21,7 @@ public class ReaderThread extends Thread {
         this.in = socket.getInputStream();
     }
 
+    @Override
     public void interrupt() {
         try {
             socket.close();
@@ -30,15 +31,17 @@ public class ReaderThread extends Thread {
         }
     }
 
+    @Override
     public void run() {
         try {
             byte[] buf = new byte[BUFSZ];
             while (true) {
                 int count = in.read(buf);
-                if (count < 0)
+                if (count < 0) {
                     break;
-                else if (count > 0)
+                } else if (count > 0) {
                     processBuffer(buf, count);
+                }
             }
         } catch (IOException e) { /* Allow thread to exit */
         }

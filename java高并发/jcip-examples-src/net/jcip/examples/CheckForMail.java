@@ -17,13 +17,16 @@ public class CheckForMail {
         ExecutorService exec = Executors.newCachedThreadPool();
         final AtomicBoolean hasNewMail = new AtomicBoolean(false);
         try {
-            for (final String host : hosts)
+            for (final String host : hosts) {
                 exec.execute(new Runnable() {
+                    @Override
                     public void run() {
-                        if (checkMail(host))
+                        if (checkMail(host)) {
                             hasNewMail.set(true);
+                        }
                     }
                 });
+            }
         } finally {
             exec.shutdown();
             exec.awaitTermination(timeout, unit);

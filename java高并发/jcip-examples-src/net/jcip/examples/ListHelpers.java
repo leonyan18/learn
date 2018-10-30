@@ -19,8 +19,9 @@ class BadListHelper <E> {
 
     public synchronized boolean putIfAbsent(E x) {
         boolean absent = !list.contains(x);
-        if (absent)
+        if (absent) {
             list.add(x);
+        }
         return absent;
     }
 }
@@ -32,8 +33,9 @@ class GoodListHelper <E> {
     public boolean putIfAbsent(E x) {
         synchronized (list) {
             boolean absent = !list.contains(x);
-            if (absent)
+            if (absent) {
                 list.add(x);
+            }
             return absent;
         }
     }

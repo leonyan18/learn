@@ -18,10 +18,12 @@ public abstract class FutureRenderer {
         final List<ImageInfo> imageInfos = scanForImageInfo(source);
         Callable<List<ImageData>> task =
                 new Callable<List<ImageData>>() {
+                    @Override
                     public List<ImageData> call() {
                         List<ImageData> result = new ArrayList<ImageData>();
-                        for (ImageInfo imageInfo : imageInfos)
+                        for (ImageInfo imageInfo : imageInfos) {
                             result.add(imageInfo.downloadImage());
+                        }
                         return result;
                     }
                 };
@@ -31,8 +33,9 @@ public abstract class FutureRenderer {
 
         try {
             List<ImageData> imageData = future.get();
-            for (ImageData data : imageData)
+            for (ImageData data : imageData) {
                 renderImage(data);
+            }
         } catch (InterruptedException e) {
             // Re-assert the thread's interrupted status
             Thread.currentThread().interrupt();

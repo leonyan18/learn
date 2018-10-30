@@ -32,8 +32,9 @@ public class SemaphoreOnLock {
     public void acquire() throws InterruptedException {
         lock.lock();
         try {
-            while (permits <= 0)
+            while (permits <= 0) {
                 permitsAvailable.await();
+            }
             --permits;
         } finally {
             lock.unlock();
