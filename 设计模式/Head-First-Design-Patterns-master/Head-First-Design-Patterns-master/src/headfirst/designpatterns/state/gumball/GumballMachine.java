@@ -81,7 +81,8 @@ public class GumballMachine {
 		state = NO_QUARTER;
 	}
 
-	public String toString() {
+	@Override
+    public String toString() {
 		StringBuffer result = new StringBuffer();
 		result.append("\nMighty Gumball, Inc.");
 		result.append("\nJava-enabled Standing Gumball Model #2004\n");

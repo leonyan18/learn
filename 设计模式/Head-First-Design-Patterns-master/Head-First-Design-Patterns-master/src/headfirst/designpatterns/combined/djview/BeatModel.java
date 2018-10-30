@@ -12,29 +12,34 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 	Sequence sequence;
 	Track track;
 
-	public void initialize() {
+	@Override
+    public void initialize() {
 		setUpMidi();
 		buildTrackAndStart();
 	}
 
-	public void on() {
+	@Override
+    public void on() {
 		System.out.println("Starting the sequencer");
 		sequencer.start();
 		setBPM(90);
 	}
 
-	public void off() {
+	@Override
+    public void off() {
 		setBPM(0);
 		sequencer.stop();
 	}
 
-	public void setBPM(int bpm) {
+	@Override
+    public void setBPM(int bpm) {
 		this.bpm = bpm;
 		sequencer.setTempoInBPM(getBPM());
 		notifyBPMObservers();
 	}
 
-	public int getBPM() {
+	@Override
+    public int getBPM() {
 		return bpm;
 	}
 
@@ -43,7 +48,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 	}
 
 
-	public void registerObserver(BeatObserver o) {
+	@Override
+    public void registerObserver(BeatObserver o) {
 		beatObservers.add(o);
 	}
 
@@ -54,7 +60,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 		}
 	}
 
-	public void registerObserver(BPMObserver o) {
+	@Override
+    public void registerObserver(BPMObserver o) {
 		bpmObservers.add(o);
 	}
 
@@ -66,7 +73,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 	}
 
 
-	public void removeObserver(BeatObserver o) {
+	@Override
+    public void removeObserver(BeatObserver o) {
 		int i = beatObservers.indexOf(o);
 		if (i >= 0) {
 			beatObservers.remove(i);
@@ -75,7 +83,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 
 
 
-	public void removeObserver(BPMObserver o) {
+	@Override
+    public void removeObserver(BPMObserver o) {
 		int i = bpmObservers.indexOf(o);
 		if (i >= 0) {
 			bpmObservers.remove(i);
@@ -83,7 +92,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 	}
 
 
-	public void meta(MetaMessage message) {
+	@Override
+    public void meta(MetaMessage message) {
 		if (message.getType() == 47) {
 			beatEvent();
 			sequencer.start();

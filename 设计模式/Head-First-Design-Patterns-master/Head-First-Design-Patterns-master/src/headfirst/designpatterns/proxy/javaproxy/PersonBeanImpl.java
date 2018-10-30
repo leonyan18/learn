@@ -7,37 +7,47 @@ public class PersonBeanImpl implements PersonBean {
 	int rating;
 	int ratingCount = 0;
   
-	public String getName() {
+	@Override
+    public String getName() {
 		return name;	
 	} 
   
-	public String getGender() {
+	@Override
+    public String getGender() {
 		return gender;
 	}
   
-	public String getInterests() {
+	@Override
+    public String getInterests() {
 		return interests;
 	}
    
-	public int getHotOrNotRating() {
-		if (ratingCount == 0) return 0;
+	@Override
+    public int getHotOrNotRating() {
+		if (ratingCount == 0) {
+            return 0;
+        }
 		return (rating/ratingCount);
 	}
   
  
-	public void setName(String name) {
+	@Override
+    public void setName(String name) {
 		this.name = name;
 	}
  
-	public void setGender(String gender) {
+	@Override
+    public void setGender(String gender) {
 		this.gender = gender;
 	} 
   
-	public void setInterests(String interests) {
+	@Override
+    public void setInterests(String interests) {
 		this.interests = interests;
 	} 
   
-	public void setHotOrNotRating(int rating) {
+	@Override
+    public void setHotOrNotRating(int rating) {
 		this.rating += rating;	
 		ratingCount++;
 	}

@@ -9,7 +9,8 @@ public class CompositeIterator implements Iterator<MenuComponent> {
 		stack.push(iterator);
 	}
    
-	public MenuComponent next() {
+	@Override
+    public MenuComponent next() {
 		if (hasNext()) {
 			Iterator<MenuComponent> iterator = stack.peek();
 			MenuComponent component = iterator.next();
@@ -20,7 +21,8 @@ public class CompositeIterator implements Iterator<MenuComponent> {
 		}
 	}
   
-	public boolean hasNext() {
+	@Override
+    public boolean hasNext() {
 		if (stack.empty()) {
 			return false;
 		} else {

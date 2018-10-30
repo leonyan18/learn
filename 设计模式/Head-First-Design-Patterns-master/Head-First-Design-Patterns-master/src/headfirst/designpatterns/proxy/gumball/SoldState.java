@@ -8,19 +8,23 @@ public class SoldState implements State {
         this.gumballMachine = gumballMachine;
     }
        
-	public void insertQuarter() {
+	@Override
+    public void insertQuarter() {
 		System.out.println("Please wait, we're already giving you a gumball");
 	}
  
-	public void ejectQuarter() {
+	@Override
+    public void ejectQuarter() {
 		System.out.println("Sorry, you already turned the crank");
 	}
  
-	public void turnCrank() {
+	@Override
+    public void turnCrank() {
 		System.out.println("Turning twice doesn't get you another gumball!");
 	}
  
-	public void dispense() {
+	@Override
+    public void dispense() {
 		gumballMachine.releaseBall();
 		if (gumballMachine.getCount() > 0) {
 			gumballMachine.setState(gumballMachine.getNoQuarterState());
@@ -30,7 +34,8 @@ public class SoldState implements State {
 		}
 	}
  
-	public String toString() {
+	@Override
+    public String toString() {
 		return "dispensing a gumball";
 	}
 }

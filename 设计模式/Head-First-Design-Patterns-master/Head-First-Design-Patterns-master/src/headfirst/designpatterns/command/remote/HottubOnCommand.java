@@ -7,7 +7,8 @@ public class HottubOnCommand implements Command {
 		this.hottub = hottub;
 	}
 
-	public void execute() {
+	@Override
+    public void execute() {
 		hottub.on();
 		hottub.heat();
 		hottub.bubblesOn();

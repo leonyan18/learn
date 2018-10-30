@@ -9,20 +9,24 @@ public class GooseAdapter implements Quackable {
 		observable = new Observable(this);
 	}
  
-	public void quack() {
+	@Override
+    public void quack() {
 		goose.honk();
 		notifyObservers();
 	}
 
-	public void registerObserver(Observer observer) {
+	@Override
+    public void registerObserver(Observer observer) {
 		observable.registerObserver(observer);
 	}
 
-	public void notifyObservers() {
+	@Override
+    public void notifyObservers() {
 		observable.notifyObservers();
 	}
 
-	public String toString() {
+	@Override
+    public String toString() {
 		return "Goose pretending to be a Duck";
 	}
 }

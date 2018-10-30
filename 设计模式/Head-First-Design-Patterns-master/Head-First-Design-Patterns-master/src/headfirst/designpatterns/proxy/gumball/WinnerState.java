@@ -8,19 +8,23 @@ public class WinnerState implements State {
         this.gumballMachine = gumballMachine;
     }
  
-	public void insertQuarter() {
+	@Override
+    public void insertQuarter() {
 		System.out.println("Please wait, we're already giving you a Gumball");
 	}
  
-	public void ejectQuarter() {
+	@Override
+    public void ejectQuarter() {
 		System.out.println("Please wait, we're already giving you a Gumball");
 	}
  
-	public void turnCrank() {
+	@Override
+    public void turnCrank() {
 		System.out.println("Turning again doesn't get you another gumball!");
 	}
  
-	public void dispense() {
+	@Override
+    public void dispense() {
 		System.out.println("YOU'RE A WINNER! You get two gumballs for your quarter");
 		gumballMachine.releaseBall();
 		if (gumballMachine.getCount() == 0) {
@@ -36,7 +40,8 @@ public class WinnerState implements State {
 		}
 	}
  
-	public String toString() {
+	@Override
+    public String toString() {
 		return "despensing two gumballs for your quarter, because YOU'RE A WINNER!";
 	}
 }

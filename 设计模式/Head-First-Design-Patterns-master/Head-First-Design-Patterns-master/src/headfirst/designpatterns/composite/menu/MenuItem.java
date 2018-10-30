@@ -17,23 +17,28 @@ public class MenuItem extends MenuComponent {
 		this.price = price;
 	}
   
-	public String getName() {
+	@Override
+    public String getName() {
 		return name;
 	}
   
-	public String getDescription() {
+	@Override
+    public String getDescription() {
 		return description;
 	}
   
-	public double getPrice() {
+	@Override
+    public double getPrice() {
 		return price;
 	}
   
-	public boolean isVegetarian() {
+	@Override
+    public boolean isVegetarian() {
 		return vegetarian;
 	}
   
-	public void print() {
+	@Override
+    public void print() {
 		System.out.print("  " + getName());
 		if (isVegetarian()) {
 			System.out.print("(v)");

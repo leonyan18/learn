@@ -7,11 +7,13 @@ public class CeilingFanOffCommand implements Command {
 	public CeilingFanOffCommand(CeilingFan ceilingFan) {
 		this.ceilingFan = ceilingFan;
 	}
-	public void execute() {
+	@Override
+    public void execute() {
 		prevSpeed = ceilingFan.getSpeed();
 		ceilingFan.off();
 	}
-	public void undo() {
+	@Override
+    public void undo() {
 		switch (prevSpeed) {
 			case CeilingFan.HIGH: 	ceilingFan.high(); break;
 			case CeilingFan.MEDIUM: ceilingFan.medium(); break;

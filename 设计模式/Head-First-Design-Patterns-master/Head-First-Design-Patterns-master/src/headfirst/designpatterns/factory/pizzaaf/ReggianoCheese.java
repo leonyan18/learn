@@ -2,7 +2,8 @@ package headfirst.designpatterns.factory.pizzaaf;
 
 public class ReggianoCheese implements Cheese {
 
-	public String toString() {
+	@Override
+    public String toString() {
 		return "Reggiano Cheese";
 	}
 }

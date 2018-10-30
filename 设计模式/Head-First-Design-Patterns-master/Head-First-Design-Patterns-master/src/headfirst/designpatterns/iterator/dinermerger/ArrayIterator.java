@@ -8,13 +8,15 @@ public class ArrayIterator implements Iterator {
 		this.items = items;
 	}
  
-	public MenuItem next() {
+	@Override
+    public MenuItem next() {
 		MenuItem menuItem = items[position];
 		position = position + 1;
 		return menuItem;
 	}
  
-	public boolean hasNext() {
+	@Override
+    public boolean hasNext() {
 		if (position >= items.length || items[position] == null) {
 			return false;
 		} else {

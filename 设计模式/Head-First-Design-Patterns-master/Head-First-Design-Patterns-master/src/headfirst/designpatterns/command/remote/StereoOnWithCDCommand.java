@@ -7,7 +7,8 @@ public class StereoOnWithCDCommand implements Command {
 		this.stereo = stereo;
 	}
  
-	public void execute() {
+	@Override
+    public void execute() {
 		stereo.on();
 		stereo.setCD();
 		stereo.setVolume(11);

@@ -6,7 +6,8 @@ public class Goose {
 		System.out.println("Honk");
 	}
 
-	public String toString() {
+	@Override
+    public String toString() {
 		return "Goose";
 	}
 }

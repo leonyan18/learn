@@ -10,7 +10,8 @@ public class HeatIndexDisplay implements Observer, DisplayElement {
 		observable.addObserver(this);
 	}
 
-	public void update(Observable observable, Object arg) {
+	@Override
+    public void update(Observable observable, Object arg) {
 		if (observable instanceof WeatherData) {
 			WeatherData weatherData = (WeatherData)observable;
 			float t = weatherData.getTemperature();
@@ -36,7 +37,8 @@ public class HeatIndexDisplay implements Observer, DisplayElement {
 		}
 	}
 
-	public void display() {
+	@Override
+    public void display() {
 		System.out.println("Heat index is " + heatIndex);
 	}
 }

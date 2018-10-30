@@ -2,19 +2,23 @@ package headfirst.designpatterns.combining.factory;
 
 public class DuckFactory extends AbstractDuckFactory {
   
-	public Quackable createMallardDuck() {
+	@Override
+    public Quackable createMallardDuck() {
 		return new MallardDuck();
 	}
   
-	public Quackable createRedheadDuck() {
+	@Override
+    public Quackable createRedheadDuck() {
 		return new RedheadDuck();
 	}
   
-	public Quackable createDuckCall() {
+	@Override
+    public Quackable createDuckCall() {
 		return new DuckCall();
 	}
    
-	public Quackable createRubberDuck() {
+	@Override
+    public Quackable createRubberDuck() {
 		return new RubberDuck();
 	}
 }

@@ -45,7 +45,8 @@ public class Amplifier {
 		this.cd = cd;
 	}
  
-	public String toString() {
+	@Override
+    public String toString() {
 		return description;
 	}
 }

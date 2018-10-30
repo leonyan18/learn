@@ -9,11 +9,13 @@ public class Duck implements Comparable<Duck> {
 		this.weight = weight;
 	}
  
-	public String toString() {
+	@Override
+    public String toString() {
 		return name + " weighs " + weight;
 	}
   
-	public int compareTo(Duck object) {
+	@Override
+    public int compareTo(Duck object) {
  
 		Duck otherDuck = object;
   

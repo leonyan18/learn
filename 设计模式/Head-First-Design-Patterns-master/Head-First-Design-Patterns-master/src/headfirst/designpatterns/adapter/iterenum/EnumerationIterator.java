@@ -9,15 +9,18 @@ public class EnumerationIterator implements Iterator<Object> {
 		this.enumeration = enumeration;
 	}
  
-	public boolean hasNext() {
+	@Override
+    public boolean hasNext() {
 		return enumeration.hasMoreElements();
 	}
  
-	public Object next() {
+	@Override
+    public Object next() {
 		return enumeration.nextElement();
 	}
  
-	public void remove() {
+	@Override
+    public void remove() {
 		throw new UnsupportedOperationException();
 	}
 }

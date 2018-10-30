@@ -9,12 +9,14 @@ public class DimmerLightOffCommand implements Command {
 		prevLevel = 100;
 	}
 
-	public void execute() {
+	@Override
+    public void execute() {
 		prevLevel = light.getLevel();
 		light.off();
 	}
 
-	public void undo() {
+	@Override
+    public void undo() {
 		light.dim(prevLevel);
 	}
 }

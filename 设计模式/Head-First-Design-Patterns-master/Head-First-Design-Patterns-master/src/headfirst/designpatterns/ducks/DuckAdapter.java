@@ -10,11 +10,13 @@ public class DuckAdapter implements Turkey {
 		rand = new Random();
 	}
     
-	public void gobble() {
+	@Override
+    public void gobble() {
 		duck.quack();
 	}
   
-	public void fly() {
+	@Override
+    public void fly() {
 		if (rand.nextInt(5)  == 0) {
 		     duck.fly();
 		}

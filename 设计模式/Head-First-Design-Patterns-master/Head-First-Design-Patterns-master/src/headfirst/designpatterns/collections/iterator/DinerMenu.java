@@ -30,11 +30,13 @@ public class DinerMenu implements Menu {
 		return menuItems;
 	}
   
-	public Iterator createIterator() {
+	@Override
+    public Iterator createIterator() {
 		return new DinerMenuIterator(menuItems);
 	}
  
-	public String toString() {
+	@Override
+    public String toString() {
 		return "Diner Menu";
 	}
 	// other menu methods here

@@ -10,7 +10,8 @@ public class Flock implements Quackable {
 		quackers.add(quacker);
 	}
  
-	public void quack() {
+	@Override
+    public void quack() {
 		Iterator<Quackable> iterator = quackers.iterator();
 		while (iterator.hasNext()) {
 			Quackable quacker = iterator.next();
@@ -18,7 +19,8 @@ public class Flock implements Quackable {
 		}
 	}
  
-	public String toString() {
+	@Override
+    public String toString() {
 		return "Flock of Quackers";
 	}
 }

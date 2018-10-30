@@ -10,13 +10,15 @@ public class DinerMenuIterator implements Iterator<String> {
 		this.list = list;
 	}
  
-	public String next() {
+	@Override
+    public String next() {
 		String menuItem = list[position];
 		position = position + 1;
 		return menuItem;
 	}
  
-	public boolean hasNext() {
+	@Override
+    public boolean hasNext() {
 		if (position >= list.length || list[position] == null) {
 			return false;
 		} else {
@@ -24,7 +26,8 @@ public class DinerMenuIterator implements Iterator<String> {
 		}
 	}
   
-	public void remove() {
+	@Override
+    public void remove() {
 		if (position <= 0) {
 			throw new IllegalStateException
 				("You can't remove an item until you've done at least one next()");

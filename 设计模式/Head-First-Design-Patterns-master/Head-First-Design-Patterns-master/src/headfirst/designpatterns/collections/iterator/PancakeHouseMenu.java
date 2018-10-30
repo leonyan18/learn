@@ -23,11 +23,13 @@ public class PancakeHouseMenu implements Menu {
 		return menuItems;
 	}
   
-	public Iterator createIterator() {
+	@Override
+    public Iterator createIterator() {
 		return new PancakeHouseMenuIterator(menuItems);
 	}
   
-	public String toString() {
+	@Override
+    public String toString() {
 		return "Pancake House Menu";
 	}
 

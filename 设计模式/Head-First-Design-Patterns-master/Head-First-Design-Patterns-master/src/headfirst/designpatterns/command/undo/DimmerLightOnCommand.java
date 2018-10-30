@@ -8,12 +8,14 @@ public class DimmerLightOnCommand implements Command {
 		this.light = light;
 	}
 
-	public void execute() {
+	@Override
+    public void execute() {
 		prevLevel = light.getLevel();
 		light.dim(75);
 	}
 
-	public void undo() {
+	@Override
+    public void undo() {
 		light.dim(prevLevel);
 	}
 }

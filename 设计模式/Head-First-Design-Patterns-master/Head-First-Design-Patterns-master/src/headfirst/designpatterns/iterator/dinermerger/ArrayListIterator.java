@@ -10,13 +10,15 @@ public class ArrayListIterator implements Iterator {
 		this.items = items;
 	}
  
-	public MenuItem next() {
+	@Override
+    public MenuItem next() {
 		MenuItem item = items.get(position);
 		position = position + 1;
 		return item;
 	}
  
-	public boolean hasNext() {
+	@Override
+    public boolean hasNext() {
 		if (position >= items.size()) {
 			return false;
 		} else {

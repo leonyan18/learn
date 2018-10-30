@@ -7,12 +7,14 @@ public class LightOffCommand implements Command {
 		this.light = light;
 	}
  
-	public void execute() {
+	@Override
+    public void execute() {
         level = light.getLevel();
 		light.off();
 	}
  
-	public void undo() {
+	@Override
+    public void undo() {
 		light.dim(level);
 	}
 }

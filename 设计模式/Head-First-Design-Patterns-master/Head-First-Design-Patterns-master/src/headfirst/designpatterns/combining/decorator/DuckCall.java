@@ -2,11 +2,13 @@ package headfirst.designpatterns.combining.decorator;
 
 public class DuckCall implements Quackable {
  
-	public void quack() {
+	@Override
+    public void quack() {
 		System.out.println("Kwak");
 	}
  
-	public String toString() {
+	@Override
+    public String toString() {
 		return "Duck Call";
 	}
 }

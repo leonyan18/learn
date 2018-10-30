@@ -30,7 +30,8 @@ public class Tuner {
 		System.out.println(description + " setting FM mode");
 	}
 
-	public String toString() {
+	@Override
+    public String toString() {
 		return description;
 	}
 }

@@ -2,11 +2,13 @@ package headfirst.designpatterns.combining.factory;
 
 public class MallardDuck implements Quackable {
  
-	public void quack() {
+	@Override
+    public void quack() {
 		System.out.println("Quack");
 	}
  
-	public String toString() {
+	@Override
+    public String toString() {
 		return "Mallard Duck";
 	}
 }

@@ -7,7 +7,8 @@ public class LivingroomLightOffCommand implements Command {
 		this.light = light;
 	}
 
-	public void execute() {
+	@Override
+    public void execute() {
 		light.off();
 	}
 }

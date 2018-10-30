@@ -12,7 +12,8 @@ class ImageProxy implements Icon {
      
 	public ImageProxy(URL url) { imageURL = url; }
      
-	public int getIconWidth() {
+	@Override
+    public int getIconWidth() {
 		if (imageIcon != null) {
             return imageIcon.getIconWidth();
         } else {
@@ -20,7 +21,8 @@ class ImageProxy implements Icon {
 		}
 	}
  
-	public int getIconHeight() {
+	@Override
+    public int getIconHeight() {
 		if (imageIcon != null) {
             return imageIcon.getIconHeight();
         } else {
@@ -32,7 +34,8 @@ class ImageProxy implements Icon {
 		this.imageIcon = imageIcon;
 	}
      
-	public void paintIcon(final Component c, Graphics  g, int x,  int y) {
+	@Override
+    public void paintIcon(final Component c, Graphics  g, int x, int y) {
 		if (imageIcon != null) {
 			imageIcon.paintIcon(c, g, x, y);
 		} else {
@@ -41,7 +44,8 @@ class ImageProxy implements Icon {
 				retrieving = true;
 
 				retrievalThread = new Thread(new Runnable() {
-					public void run() {
+					@Override
+                    public void run() {
 						try {
 							setImageIcon(new ImageIcon(imageURL, "CD Cover"));
 							c.repaint();

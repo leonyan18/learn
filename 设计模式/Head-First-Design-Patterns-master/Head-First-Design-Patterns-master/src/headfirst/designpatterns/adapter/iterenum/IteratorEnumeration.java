@@ -9,11 +9,13 @@ public class IteratorEnumeration implements Enumeration<Object> {
 		this.iterator = iterator;
 	}
  
-	public boolean hasMoreElements() {
+	@Override
+    public boolean hasMoreElements() {
 		return iterator.hasNext();
 	}
  
-	public Object nextElement() {
+	@Override
+    public Object nextElement() {
 		return iterator.next();
 	}
 }

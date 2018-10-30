@@ -15,7 +15,8 @@ public class HeartModel implements HeartModelInterface, Runnable {
 		thread.start();
 	}
 
-	public void run() {
+	@Override
+    public void run() {
 		int lastrate = -1;
 
 		for(;;) {
@@ -37,15 +38,18 @@ public class HeartModel implements HeartModelInterface, Runnable {
 			} catch (Exception e) {}
 		}
 	}
-	public int getHeartRate() {
+	@Override
+    public int getHeartRate() {
 		return 60000/time;
 	}
 
-	public void registerObserver(BeatObserver o) {
+	@Override
+    public void registerObserver(BeatObserver o) {
 		beatObservers.add(o);
 	}
 
-	public void removeObserver(BeatObserver o) {
+	@Override
+    public void removeObserver(BeatObserver o) {
 		int i = beatObservers.indexOf(o);
 		if (i >= 0) {
 			beatObservers.remove(i);
@@ -59,11 +63,13 @@ public class HeartModel implements HeartModelInterface, Runnable {
 		}
 	}
 
-	public void registerObserver(BPMObserver o) {
+	@Override
+    public void registerObserver(BPMObserver o) {
 		bpmObservers.add(o);
 	}
 
-	public void removeObserver(BPMObserver o) {
+	@Override
+    public void removeObserver(BPMObserver o) {
 		int i = bpmObservers.indexOf(o);
 		if (i >= 0) {
 			bpmObservers.remove(i);

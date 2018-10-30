@@ -2,28 +2,34 @@ package headfirst.designpatterns.factory.pizzaaf;
 
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
  
-	public Dough createDough() {
+	@Override
+    public Dough createDough() {
 		return new ThinCrustDough();
 	}
  
-	public Sauce createSauce() {
+	@Override
+    public Sauce createSauce() {
 		return new MarinaraSauce();
 	}
  
-	public Cheese createCheese() {
+	@Override
+    public Cheese createCheese() {
 		return new ReggianoCheese();
 	}
  
-	public Veggies[] createVeggies() {
+	@Override
+    public Veggies[] createVeggies() {
 		Veggies veggies[] = { new Garlic(), new Onion(), new Mushroom(), new RedPepper() };
 		return veggies;
 	}
  
-	public Pepperoni createPepperoni() {
+	@Override
+    public Pepperoni createPepperoni() {
 		return new SlicedPepperoni();
 	}
 
-	public Clams createClam() {
+	@Override
+    public Clams createClam() {
 		return new FreshClams();
 	}
 }

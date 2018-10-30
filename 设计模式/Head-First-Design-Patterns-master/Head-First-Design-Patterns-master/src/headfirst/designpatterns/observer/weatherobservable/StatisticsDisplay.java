@@ -13,7 +13,8 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 		observable.addObserver(this);
 	}
 
-	public void update(Observable observable, Object arg) {
+	@Override
+    public void update(Observable observable, Object arg) {
 		if (observable instanceof WeatherData) {
 			WeatherData weatherData = (WeatherData)observable;
 			float temp = weatherData.getTemperature();
@@ -32,7 +33,8 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 		}
 	}
 
-	public void display() {
+	@Override
+    public void display() {
 		System.out.println("Avg/Max/Min temperature = " + (tempSum / numReadings)
 			+ "/" + maxTemp + "/" + minTemp);
 	}

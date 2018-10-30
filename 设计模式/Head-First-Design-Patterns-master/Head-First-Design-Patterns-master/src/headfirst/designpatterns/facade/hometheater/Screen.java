@@ -16,7 +16,8 @@ public class Screen {
 	}
 
 
-	public String toString() {
+	@Override
+    public String toString() {
 		return description;
 	}
 }

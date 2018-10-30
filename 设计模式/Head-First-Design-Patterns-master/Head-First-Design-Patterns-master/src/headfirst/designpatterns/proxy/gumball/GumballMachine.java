@@ -61,14 +61,17 @@ public class GumballMachine
 		state = noQuarterState;
 	}
  
-	public int getCount() {
+	@Override
+    public int getCount() {
 		return count;
 	}
  
+    @Override
     public State getState() {
         return state;
     }
  
+    @Override
     public String getLocation() {
         return location;
     }
@@ -93,7 +96,8 @@ public class GumballMachine
         return winnerState;
     }
  
-	public String toString() {
+	@Override
+    public String toString() {
 		StringBuffer result = new StringBuffer();
 		result.append("\nMighty Gumball, Inc.");
 		result.append("\nJava-enabled Standing Gumball Model #2014");

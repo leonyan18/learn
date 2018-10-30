@@ -10,19 +10,22 @@ public class AlternatingDinerMenuIterator implements Iterator {
 		this.list = list;
 		position = Calendar.DAY_OF_WEEK % 2;
 	}
-	public MenuItem next() {
+	@Override
+    public MenuItem next() {
 		MenuItem menuItem = list[position];
 		position = position + 2;
 		return menuItem;
 	}
-	public boolean hasNext() {
+	@Override
+    public boolean hasNext() {
 		if (position >= list.length || list[position] == null) {
 			return false;
 		} else {
 			return true;
 		}
 	}
-	public String toString() {
+	@Override
+    public String toString() {
 		return "Alternating Diner Menu Iterator";
 	}
 }

@@ -9,7 +9,8 @@ public class NonOwnerInvocationHandler implements InvocationHandler {
 		this.person = person;
 	}
  
-	public Object invoke(Object proxy, Method method, Object[] args) 
+	@Override
+    public Object invoke(Object proxy, Method method, Object[] args)
 			throws IllegalAccessException {
   
 		try {

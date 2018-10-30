@@ -7,11 +7,13 @@ public class GooseAdapter implements Quackable {
 		this.goose = goose;
 	}
  
-	public void quack() {
+	@Override
+    public void quack() {
 		goose.honk();
 	}
 
-	public String toString() {
+	@Override
+    public String toString() {
 		return "Goose pretending to be a Duck";
 	}
 }

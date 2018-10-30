@@ -7,11 +7,13 @@ public class TurkeyAdapter implements Duck {
 		this.turkey = turkey;
 	}
     
-	public void quack() {
+	@Override
+    public void quack() {
 		turkey.gobble();
 	}
   
-	public void fly() {
+	@Override
+    public void fly() {
 		for(int i=0; i < 5; i++) {
 			turkey.fly();
 		}

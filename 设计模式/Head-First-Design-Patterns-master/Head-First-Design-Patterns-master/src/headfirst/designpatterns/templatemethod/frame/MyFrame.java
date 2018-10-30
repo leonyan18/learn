@@ -14,7 +14,8 @@ public class MyFrame extends JFrame {
 		this.setVisible(true);
 	}
 
-	public void paint(Graphics graphics) {
+	@Override
+    public void paint(Graphics graphics) {
 		super.paint(graphics);
 		String msg = "I rule!!";
 		graphics.drawString(msg, 100, 100);

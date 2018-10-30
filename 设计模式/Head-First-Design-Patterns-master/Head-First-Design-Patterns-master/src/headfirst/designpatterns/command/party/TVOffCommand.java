@@ -7,11 +7,13 @@ public class TVOffCommand implements Command {
 		this.tv= tv;
 	}
 
-	public void execute() {
+	@Override
+    public void execute() {
 		tv.off();
 	}
 
-	public void undo() {
+	@Override
+    public void undo() {
 		tv.on();
 	}
 }

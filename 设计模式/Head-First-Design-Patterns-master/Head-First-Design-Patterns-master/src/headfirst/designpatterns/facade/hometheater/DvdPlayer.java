@@ -56,7 +56,8 @@ public class DvdPlayer {
 		System.out.println(description + " set surround audio");
 	}
  
-	public String toString() {
+	@Override
+    public String toString() {
 		return description;
 	}
 }

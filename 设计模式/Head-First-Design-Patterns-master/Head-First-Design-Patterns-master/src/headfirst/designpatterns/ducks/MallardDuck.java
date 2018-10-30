@@ -1,11 +1,13 @@
 package headfirst.designpatterns.ducks;
 
 public class MallardDuck implements Duck {
-	public void quack() {
+	@Override
+    public void quack() {
 		System.out.println("Quack");
 	}
  
-	public void fly() {
+	@Override
+    public void fly() {
 		System.out.println("I'm flying");
 	}
 }

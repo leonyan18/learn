@@ -7,11 +7,13 @@ public class HottubOffCommand implements Command {
 		this.hottub = hottub;
 	}
 
-	public void execute() {
+	@Override
+    public void execute() {
 		hottub.setTemperature(98);
 		hottub.off();
 	}
-	public void undo() {
+	@Override
+    public void undo() {
 		hottub.on();
 	}
 }

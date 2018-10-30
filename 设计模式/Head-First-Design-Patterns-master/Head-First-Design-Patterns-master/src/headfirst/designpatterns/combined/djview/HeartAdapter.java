@@ -7,31 +7,40 @@ public class HeartAdapter implements BeatModelInterface {
 		this.heart = heart;
 	}
 
+    @Override
     public void initialize() {}
   
+    @Override
     public void on() {}
   
+    @Override
     public void off() {}
    
-	public int getBPM() {
+	@Override
+    public int getBPM() {
 		return heart.getHeartRate();
 	}
   
+    @Override
     public void setBPM(int bpm) {}
    
-	public void registerObserver(BeatObserver o) {
+	@Override
+    public void registerObserver(BeatObserver o) {
 		heart.registerObserver(o);
 	}
     
-	public void removeObserver(BeatObserver o) {
+	@Override
+    public void removeObserver(BeatObserver o) {
 		heart.removeObserver(o);
 	}
      
-	public void registerObserver(BPMObserver o) {
+	@Override
+    public void registerObserver(BPMObserver o) {
 		heart.registerObserver(o);
 	}
   
-	public void removeObserver(BPMObserver o) {
+	@Override
+    public void removeObserver(BPMObserver o) {
 		heart.removeObserver(o);
 	}
 }

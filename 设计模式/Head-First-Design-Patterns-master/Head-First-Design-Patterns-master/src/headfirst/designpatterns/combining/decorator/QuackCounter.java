@@ -8,7 +8,8 @@ public class QuackCounter implements Quackable {
 		this.duck = duck;
 	}
   
-	public void quack() {
+	@Override
+    public void quack() {
 		duck.quack();
 		numberOfQuacks++;
 	}
@@ -16,7 +17,8 @@ public class QuackCounter implements Quackable {
 	public static int getQuacks() {
 		return numberOfQuacks;
 	}
-	public String toString() {
+	@Override
+    public String toString() {
 		return duck.toString();
 	}
 }

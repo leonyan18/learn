@@ -7,11 +7,13 @@ public class StereoOnCommand implements Command {
 		this.stereo = stereo;
 	}
 
-	public void execute() {
+	@Override
+    public void execute() {
 		stereo.on();
 	}
 
-	public void undo() {
+	@Override
+    public void undo() {
 		stereo.off();
 	}
 }

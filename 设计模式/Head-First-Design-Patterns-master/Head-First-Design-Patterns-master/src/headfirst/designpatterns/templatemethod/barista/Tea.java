@@ -1,10 +1,12 @@
 package headfirst.designpatterns.templatemethod.barista;
 
 public class Tea extends CaffeineBeverage {
-	public void brew() {
+	@Override
+    public void brew() {
 		System.out.println("Steeping the tea");
 	}
-	public void addCondiments() {
+	@Override
+    public void addCondiments() {
 		System.out.println("Adding Lemon");
 	}
 }
