@@ -258,3 +258,7 @@ public interface TransactionListener {
     LocalTransactionState checkLocalTransaction(MessageExt var1);
 }
 ~~~
+
+事务流程图
+
+![img](C:\Users\yan\Desktop\70)
