@@ -228,7 +228,7 @@ consumer.subscribe("TopicTest", MessageSelector.bySql("a between 0 and 3");
 
 ### 事务消息
 
-![img](https://upload-images.jianshu.io/upload_images/4943997-b001d03f648b9f52.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/581/format/webp)
+![img](transaction process.jpg)
 
 
 
@@ -261,4 +261,4 @@ public interface TransactionListener {
 
 事务流程图
 
-![img](C:\Users\yan\Desktop\70)
+![img](D:\MyProject\learn\rocketmq\rocketmq process.jpg)
