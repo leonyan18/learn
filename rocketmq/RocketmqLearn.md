@@ -55,7 +55,7 @@ rocketmq.namesrv.addr=localhost:9876
 
 ### 单向传输
 
-单向传输通常用于可达要求不高的消息，如消息。
+单向传输通常用于可达要求不高的消息，如日志。
 
 ~~~java
 producer.sendOneway(msg);
@@ -236,6 +236,8 @@ consumer.subscribe("TopicTest", MessageSelector.bySql("a between 0 and 3");
 
 事务结束之后只有成功的时候消费方可见，如果时unknown会超时重试（mq发送回查消息）
 
+事务消息状态有三种 `unknown`，`commit`，`rollback`
+
 producer
 
 ```java
@@ -252,9 +254,9 @@ SendResult sendResult = producer.sendMessageInTransaction(msg, null);
 
 ~~~java
 public interface TransactionListener {
-	// 执行本地事务
+	// 执行本地事务会返回事务状态
     LocalTransactionState executeLocalTransaction(Message var1, Object var2);
-	// 检查事务是否执行成功
+	// 检查事务是否执行成功，当超时时就会执行此方法
     LocalTransactionState checkLocalTransaction(MessageExt var1);
 }
 ~~~
